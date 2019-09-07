@@ -1,0 +1,15 @@
+html,
+body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+:root {
+    --active: #f0e6d2;
+    --cold: #cdbe91;
+}
+
+*:focus {
+    outline: 0;
+}
