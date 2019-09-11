@@ -13,9 +13,11 @@ import { AppRoutingModule } from "./app-routing.module";
 import { AppComponent } from "./app.component";
 import { HomeComponent } from "./home/home.component";
 import { MenuComponent } from "./components/menu/menu.component";
+import { ProfileComponent } from "./profile/profile.component";
+import { MiscComponent } from "./misc/misc.component";
 
 @NgModule({
-    declarations: [AppComponent, HomeComponent, MenuComponent],
+    declarations: [AppComponent, HomeComponent, MenuComponent, ProfileComponent, MiscComponent],
     imports: [BrowserModule, FormsModule, HttpClientModule, CoreModule, SharedModule, AppRoutingModule],
     providers: [],
     bootstrap: [AppComponent],

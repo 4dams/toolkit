@@ -1,13 +1,22 @@
 import { NgModule } from "@angular/core";
 import { Routes, RouterModule } from "@angular/router";
-import { PageNotFoundComponent } from "./shared/components";
 import { HomeComponent } from "./home/home.component";
+import { ProfileComponent } from "./profile/profile.component";
+import { MiscComponent } from "./misc/misc.component";
 
 const routes: Routes = [
     {
         path: "",
         component: HomeComponent,
         pathMatch: "full",
+    },
+    {
+        path: "profile",
+        component: ProfileComponent,
+    },
+    {
+        path: "misc",
+        component: MiscComponent,
     },
     {
         path: "**",

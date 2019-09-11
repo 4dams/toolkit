@@ -36,6 +36,13 @@
 
 .menu > .items > .item.active {
     background: linear-gradient(180deg, rgba(240, 230, 210, 0) 50%, rgba(240, 230, 210, 0.1) 100%);
-
     color: var(--active);
+}
+
+.menu > .items > .status {
+    justify-self: flex-end;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding: 0 15px;
+    color: var(--cold);
 }

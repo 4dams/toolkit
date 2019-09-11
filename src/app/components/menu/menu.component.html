@@ -1,6 +1,6 @@
 <div class="menu">
     <div class="items">
-        <div class="item" routerLink="/" routerLinkActive="active">
+        <div class="item" routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
             <a>Home</a>
         </div>
         <div class="item" routerLink="/profile" routerLinkActive="active">
@@ -8,6 +8,9 @@
         </div>
         <div class="item" routerLink="/misc" routerLinkActive="active">
             <a>Miscellaneous</a>
+        </div>
+        <div class="status">
+            <a>LCU: {{ !!lcu.connection ? "Connected" : "Not Connected" }}</a>
         </div>
     </div>
 </div>
