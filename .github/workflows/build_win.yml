@@ -1,16 +1,12 @@
-name: Build (macOS & Windows)
+name: Build (win)
 
 on: [push]
 
 jobs:
   build:
 
-    runs-on: ${{ matrix.os }}
-
-    strategy:
-      matrix:
-        os: [macOS-latest, windows-latest]
-        node-version: [10.x, 12.x]
+    runs-on: windows-latest
+    node-version: [12.x]
 
     steps:
     - uses: actions/checkout@v1
@@ -21,6 +17,7 @@ jobs:
 
     - name: Install dependencies
       run: |
+        npm install -g npm-run-all
         npm install -g typescript
         npm install -g tslint
         npm install -g @angular/cli
