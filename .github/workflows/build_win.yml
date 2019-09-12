@@ -6,7 +6,10 @@ jobs:
   build:
 
     runs-on: windows-latest
-    node-version: [12.x]
+    
+    strategy:	
+      matrix:	
+        node-version: [10.x, 12.x]
 
     steps:
     - uses: actions/checkout@v1
