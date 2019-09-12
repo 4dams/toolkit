@@ -24,14 +24,10 @@ jobs:
         npm install -g typescript
         npm install -g tslint
         npm install -g @angular/cli
-        npm install -g @angular/devkit
         npm install
 
     - name: Start application
-      run: npm run start
-
-    - name: Build application
-      run: npm run build
+      run: npm start
 
       env:
         CI: true
