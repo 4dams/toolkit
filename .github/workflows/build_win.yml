@@ -20,10 +20,10 @@ jobs:
 
     - name: Install dependencies
       run: |
-        npm install -g npm-run-all
         npm install -g typescript
         npm install -g tslint
         npm install -g @angular/cli
+        npm install -g npm-run-all
         npm install
 
     - name: Start application
