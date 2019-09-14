@@ -49,7 +49,7 @@ export class LcuService {
         return "Basic " + Buffer.from(this.connection.username + ":" + this.connection.password).toString("base64");
     }
 
-    public get(path: string, params: any) {
+    public get(path: string, params?: any) {
         return this.http
             .get(`https://${this.connection.address}:${this.connection.port}/${path}`, {
                 params,
@@ -62,9 +62,20 @@ export class LcuService {
             });
     }
 
-    public post(path: string, data: any) {
+    public post(path: string, data?: any) {
         return this.http
             .post(`https://${this.connection.address}:${this.connection.port}/${path}`, data)
+            .then((res: AxiosResponse) => {
+                return res.data;
+            })
+            .catch(err => {
+                // console.error(err);
+            });
+    }
+
+    public put(path: string, data?: any) {
+        return this.http
+            .put(`https://${this.connection.address}:${this.connection.port}/${path}`, data)
             .then((res: AxiosResponse) => {
                 return res.data;
             })

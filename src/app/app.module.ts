@@ -15,9 +15,10 @@ import { HomeComponent } from "./home/home.component";
 import { MenuComponent } from "./components/menu/menu.component";
 import { ProfileComponent } from "./profile/profile.component";
 import { MiscComponent } from "./misc/misc.component";
+import { SelectComponent } from "./components/select/select.component";
 
 @NgModule({
-    declarations: [AppComponent, HomeComponent, MenuComponent, ProfileComponent, MiscComponent],
+    declarations: [AppComponent, HomeComponent, MenuComponent, ProfileComponent, MiscComponent, SelectComponent],
     imports: [BrowserModule, FormsModule, HttpClientModule, CoreModule, SharedModule, AppRoutingModule],
     providers: [],
     bootstrap: [AppComponent],

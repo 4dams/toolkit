@@ -13,3 +13,48 @@ body {
 *:focus {
     outline: 0;
 }
+
+div.divider {
+    width: 100%;
+    height: 0px;
+    border-top: 1px solid #1b292a;
+    margin: 15px 0;
+}
+
+h1 {
+    color: var(--active);
+    font-size: 19px;
+    text-transform: uppercase;
+    margin-top: 14px;
+    margin-bottom: 21px;
+}
+
+button {
+    min-width: 136px;
+    padding: 6px 0;
+    background-color: #1e2328;
+    box-shadow: inset 0 0 3px #070f17;
+    color: #cdbe91;
+    font-family: Beaufort;
+    font-weight: bold;
+    text-transform: uppercase;
+    border: 2px solid;
+    border-image-source: linear-gradient(180deg, #c4a361, #6d5926);
+    border-image-slice: 1;
+    font-size: 13px;
+    cursor: pointer;
+}
+
+button:hover {
+    color: #f0e6d2;
+    background: linear-gradient(180deg, #1e232a, #433d2b);
+    border-image-source: linear-gradient(180deg, #efe5d6, #c99d3e);
+    box-shadow: none;
+}
+
+button:active {
+    box-shadow: inset 0 0 3px #070f17;
+    color: #5c5b57;
+    background: #1e2328;
+    border-image-source: linear-gradient(180deg, #463817, #694f27);
+}

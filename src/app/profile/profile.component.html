@@ -1,1 +1,13 @@
-<p>profile works!</p>
+<h1>Custom Rank</h1>
+
+<app-select [options]="tiers" [(ngModel)]="form.customRank.tier"></app-select>
+
+<app-select [options]="divisions" [(ngModel)]="form.customRank.division"></app-select>
+
+<app-select [options]="queues" [(ngModel)]="form.customRank.queue"></app-select>
+
+<button (click)="setRank()">Set Rank</button>
+
+<div class="divider"></div>
+
+<h1>Custom Status</h1>

@@ -1,0 +1,19 @@
+<label class="select">
+    <div class="wrapper">
+        <input
+            type="text"
+            (focus)="focus = true"
+            (blur)="focus = false"
+            [ngClass]="{ 'show-options': options.length > 0 && focus }"
+            [(ngModel)]="inputValue"
+            (ngModelChange)="changeEvent()"
+            [placeholder]="placeholder"
+            #input="ngModel"
+        />
+        <ul class="options" *ngIf="focus">
+            <li *ngFor="let option of options" (mousedown)="setValue(option.value, option.label)">
+                {{ option.label }}
+            </li>
+        </ul>
+    </div>
+</label>

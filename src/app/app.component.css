@@ -9,6 +9,11 @@
     font-family: "Beaufort", sans-serif;
 }
 
+.container {
+    padding: 35px;
+    box-sizing: border-box;
+}
+
 /* Fonts */
 
 @font-face {

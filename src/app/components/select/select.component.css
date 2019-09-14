@@ -1,0 +1,69 @@
+::-webkit-scrollbar {
+    width: 0px; /* Remove scrollbar space */
+    height: 0px;
+    background: transparent; /* Optional: just make scrollbar invisible */
+}
+
+.select > .wrapper {
+    position: relative;
+    width: 194px;
+    margin: 12px 0;
+}
+
+.select input {
+    height: 30px;
+    width: 180px;
+    border: 1px solid;
+    border-image-source: linear-gradient(180deg, #c4a361, #6d5926);
+    border-image-slice: 1;
+    background-color: #101c24;
+    padding-left: 12px;
+    color: #9b9687;
+    font-size: 12px;
+    cursor: pointer;
+}
+
+.select input:hover {
+    background: linear-gradient(180deg, #111920, #2c2f2d);
+    border-image-source: linear-gradient(180deg, #efe5d0, #c99c3e);
+    border-image-slice: 1;
+}
+
+.select input.show-options {
+    color: #403314 !important;
+    background: #101820;
+    border-image-source: linear-gradient(180deg, #463714, #463714) !important;
+}
+
+.select .options {
+    position: absolute;
+    top: 18px;
+    left: 0;
+    right: 0;
+    z-index: 999;
+
+    border: 1px solid #5c4b1f;
+    background-color: #010a13;
+
+    padding: 0;
+
+    list-style-type: none;
+    overflow: scroll;
+}
+
+.select .options > li:first-child {
+    border-top: none;
+}
+
+.select .options > li {
+    font-size: 12px;
+    color: #c8b98d;
+    padding: 10px 8px;
+    cursor: pointer;
+    border-top: 1px solid #1e2328;
+}
+
+.select .options > li:hover {
+    background-color: #1e2328;
+    color: #e8decb;
+}
