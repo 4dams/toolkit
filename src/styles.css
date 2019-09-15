@@ -1,3 +1,9 @@
+::-webkit-scrollbar {
+    width: 0px; /* Remove scrollbar space */
+    height: 0px;
+    background: transparent; /* Optional: just make scrollbar invisible */
+}
+
 html,
 body {
     margin: 0;
@@ -12,6 +18,14 @@ body {
 
 *:focus {
     outline: 0;
+}
+
+img {
+    -webkit-user-drag: none;
+    -khtml-user-drag: none;
+    -moz-user-drag: none;
+    -o-user-drag: none;
+    user-drag: none;
 }
 
 div.divider {

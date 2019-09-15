@@ -94,20 +94,46 @@ export class ProfileComponent implements OnInit {
         },
     };
 
+    public profile = {
+        summoner: {
+            icon: 29,
+            level: 0,
+            name: "Loading...",
+            id: "Loading...",
+            tier: "Loading...",
+            division: "Loading...",
+            queue: "Loading...",
+        },
+    };
+
     constructor(private lcu: LcuService) {}
 
     ngOnInit() {
-        this.lcu
-            .get("lol-chat/v1/me")
-            .then(data => {
-                console.log(data);
-                this.form.customRank.division = data.lol.rankedLeagueDivision;
-                this.form.customRank.tier = data.lol.rankedLeagueTier;
-                this.form.customRank.queue = data.lol.rankedLeagueQueue;
-            })
-            .catch(err => {
-                console.log(err);
-            });
+        this.updateProfileInfo();
+    }
+
+    public updateProfileInfo(): Promise<any> {
+        return new Promise((resolve, reject) => {
+            this.lcu
+                .get("lol-chat/v1/me")
+                .then(me => {
+                    console.log(me);
+                    this.form.customRank.division = me.lol.rankedLeagueDivision;
+                    this.form.customRank.tier = me.lol.rankedLeagueTier;
+                    this.form.customRank.queue = me.lol.rankedLeagueQueue;
+
+                    this.profile.summoner.icon = me.icon;
+                    this.profile.summoner.level = me.lol.level;
+                    this.profile.summoner.name = me.name;
+                    this.profile.summoner.id = me.id;
+                    this.profile.summoner.division = me.lol.rankedLeagueDivision;
+                    this.profile.summoner.tier = me.lol.rankedLeagueTier;
+                    this.profile.summoner.queue = me.lol.rankedLeagueQueue;
+                })
+                .catch(err => {
+                    console.log(err);
+                });
+        });
     }
 
     public setRank() {
@@ -121,6 +147,7 @@ export class ProfileComponent implements OnInit {
             })
             .then(res => {
                 console.log(res);
+                this.updateProfileInfo();
             })
             .catch(err => {
                 console.log(err);

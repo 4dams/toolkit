@@ -1,13 +1,33 @@
-<h1>Custom Rank</h1>
+<div class="split">
+    <div class="profile">
+        <img class="background" src="../../assets/img/profile_info.png" />
+        <img class="summoner-icon" [src]="'https://static.4da.ms/toolkit/icons/' + profile.summoner.icon + '.png'" />
+        <img class="level-background" src="../../assets/img/level.png" />
+        <p class="level-level">{{ profile.summoner.level }}</p>
+        <p class="summoner-name">{{ profile.summoner.name }}</p>
+        <pre class="summoner-id">{{ profile.summoner.id }}</pre>
+        <p class="summoner-elo">{{ profile.summoner.tier }} {{ profile.summoner.division }}</p>
+        <!--<p class="summoner-queue">{{ profile.summoner.queue }}</p>-->
+    </div>
+    <div class="settings">
+        <!-- Custom Summoner Name -->
+        <h1>Custom Summoner Name</h1>
 
-<app-select [options]="tiers" [(ngModel)]="form.customRank.tier"></app-select>
+        <!-- Custom Rank -->
+        <div class="divider"></div>
+        <h1 style="margin-top: 0;">Custom Rank</h1>
 
-<app-select [options]="divisions" [(ngModel)]="form.customRank.division"></app-select>
+        <app-select [options]="tiers" [(ngModel)]="form.customRank.tier"></app-select>
+        <app-select [options]="divisions" [(ngModel)]="form.customRank.division"></app-select>
+        <app-select [options]="queues" [(ngModel)]="form.customRank.queue"></app-select>
+        <button (click)="setRank()">Set Rank</button>
 
-<app-select [options]="queues" [(ngModel)]="form.customRank.queue"></app-select>
+        <!-- Custom Status -->
+        <div class="divider"></div>
+        <h1>Custom Status</h1>
 
-<button (click)="setRank()">Set Rank</button>
-
-<div class="divider"></div>
-
-<h1>Custom Status</h1>
+        <!-- Custom Icon -->
+        <div class="divider"></div>
+        <h1>Custom Summoner Icon</h1>
+    </div>
+</div>

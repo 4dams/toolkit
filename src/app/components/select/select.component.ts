@@ -39,7 +39,7 @@ export class SelectComponent implements OnInit {
 
     public writeValue(value: string, label: string) {
         this.value = value;
-        this.inputValue = value;
+        this.inputValue = label;
     }
 
     public changeEvent() {

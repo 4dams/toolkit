@@ -1,0 +1,83 @@
+.split {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: stretch;
+    justify-content: space-between;
+}
+
+.profile {
+    width: 190px;
+    height: 100%;
+    padding-right: 60px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-around;
+    position: relative;
+}
+
+.profile > .summoner-icon {
+    position: absolute;
+    width: 128px;
+    height: 128px;
+    border-radius: 50%;
+    top: 27px;
+}
+
+.profile > .level-background {
+    position: absolute;
+    top: 156px;
+}
+
+.profile > .level-level {
+    position: absolute;
+    top: 156px;
+    margin-top: 6px;
+    font-family: Beaufort;
+    color: #f0e6d2;
+    font-weight: bold;
+}
+
+.profile > .summoner-name {
+    position: absolute;
+    top: 200px;
+    margin: 0;
+    font-family: Beaufort;
+    color: #f0e6d2;
+    font-weight: bold;
+    font-size: 24px;
+}
+
+.profile > .summoner-id {
+    position: absolute;
+    top: 230px;
+    margin: 0;
+    color: #f0e6d2;
+    font-size: 12px;
+}
+
+.profile > .summoner-elo {
+    position: absolute;
+    top: 250px;
+    margin: 0;
+    font-family: Beaufort;
+    color: #f0e6d2;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.profile > .summoner-queue {
+    position: absolute;
+    top: 265px;
+    margin: 0;
+    font-family: Beaufort;
+    color: #f0e6d2;
+    font-weight: bold;
+    font-size: 9px;
+}
+
+.settings {
+    width: 100%;
+    height: 100%;
+    overflow: scroll;
+}
