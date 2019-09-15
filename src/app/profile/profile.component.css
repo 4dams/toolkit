@@ -7,13 +7,17 @@
 }
 
 .profile {
-    width: 190px;
+    width: 240px;
     height: 100%;
-    padding-right: 60px;
+    padding-right: 35px;
     display: flex;
     align-items: flex-start;
     justify-content: space-around;
     position: relative;
+}
+
+.profile > .background {
+    margin-top: -35px;
 }
 
 .profile > .summoner-icon {
@@ -21,7 +25,7 @@
     width: 128px;
     height: 128px;
     border-radius: 50%;
-    top: 27px;
+    top: 47px;
 }
 
 .profile > .level-background {
@@ -54,6 +58,7 @@
     margin: 0;
     color: #f0e6d2;
     font-size: 12px;
+    cursor: pointer;
 }
 
 .profile > .summoner-elo {

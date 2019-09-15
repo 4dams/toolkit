@@ -1,17 +1,31 @@
 <div class="split">
     <div class="profile">
-        <img class="background" src="../../assets/img/profile_info.png" />
+        <img class="background" src="../../assets/img/profile_info_alt.png" />
         <img class="summoner-icon" [src]="'https://static.4da.ms/toolkit/icons/' + profile.summoner.icon + '.png'" />
         <img class="level-background" src="../../assets/img/level.png" />
         <p class="level-level">{{ profile.summoner.level }}</p>
         <p class="summoner-name">{{ profile.summoner.name }}</p>
-        <pre class="summoner-id">{{ profile.summoner.id }}</pre>
+        <pre
+            class="summoner-id"
+            title="Your Summoner ID"
+            appTippy
+            [tippyOptions]="{
+                placement: 'right',
+                theme: 'light',
+                arrow: true,
+                arrowType: 'round'
+            }"
+            >{{ profile.summoner.id }}</pre
+        >
         <p class="summoner-elo">{{ profile.summoner.tier }} {{ profile.summoner.division }}</p>
         <!--<p class="summoner-queue">{{ profile.summoner.queue }}</p>-->
     </div>
     <div class="settings">
         <!-- Custom Summoner Name -->
         <h1>Custom Summoner Name</h1>
+
+        <input type="text" />
+        <button (click)="setRank()">Set Summoner Name</button>
 
         <!-- Custom Rank -->
         <div class="divider"></div>
@@ -29,5 +43,13 @@
         <!-- Custom Icon -->
         <div class="divider"></div>
         <h1>Custom Summoner Icon</h1>
+
+        <!-- Custom Icon -->
+        <div class="divider"></div>
+        <h1>Auto Accept Queue</h1>
+
+        <!-- Custom Icon -->
+        <div class="divider"></div>
+        <h1>Champ Select Greeting</h1>
     </div>
 </div>

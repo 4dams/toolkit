@@ -16,10 +16,11 @@ import { MenuComponent } from "./components/menu/menu.component";
 import { ProfileComponent } from "./profile/profile.component";
 import { MiscComponent } from "./misc/misc.component";
 import { SelectComponent } from "./components/select/select.component";
+import { TippyModule } from "ng-tippy";
 
 @NgModule({
     declarations: [AppComponent, HomeComponent, MenuComponent, ProfileComponent, MiscComponent, SelectComponent],
-    imports: [BrowserModule, FormsModule, HttpClientModule, CoreModule, SharedModule, AppRoutingModule],
+    imports: [BrowserModule, FormsModule, HttpClientModule, CoreModule, SharedModule, AppRoutingModule, TippyModule],
     providers: [],
     bootstrap: [AppComponent],
 })

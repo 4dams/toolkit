@@ -21,6 +21,7 @@
     color: #9b9687;
     font-size: 12px;
     cursor: pointer;
+    font-family: sans-serif;
 }
 
 .select input:hover {
@@ -61,6 +62,7 @@
     padding: 10px 8px;
     cursor: pointer;
     border-top: 1px solid #1e2328;
+    font-family: sans-serif;
 }
 
 .select .options > li:hover {

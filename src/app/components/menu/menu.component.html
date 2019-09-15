@@ -1,5 +1,21 @@
 <div class="menu">
     <div class="items">
+        <div class="item">
+            <button
+                class="circular"
+                title="Refresh Profile Data"
+                appTippy
+                [tippyOptions]="{
+                    placement: 'right',
+                    theme: 'light',
+                    arrow: true,
+                    arrowType: 'round'
+                }"
+            >
+                <img src="../../../assets/icons/refresh.svg" />
+            </button>
+        </div>
+
         <div class="item" routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
             <a>Home</a>
         </div>

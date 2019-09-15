@@ -45,7 +45,7 @@ h1 {
 
 button {
     min-width: 136px;
-    padding: 6px 0;
+    padding: 6px 10px;
     background-color: #1e2328;
     box-shadow: inset 0 0 3px #070f17;
     color: #cdbe91;
@@ -71,4 +71,71 @@ button:active {
     color: #5c5b57;
     background: #1e2328;
     border-image-source: linear-gradient(180deg, #463817, #694f27);
+}
+
+button.circular {
+    height: 28px;
+    width: 28px;
+    min-width: unset;
+    border-radius: 50%;
+    border: 2px solid #9b7631;
+    padding: 6px 0;
+}
+
+button.circular img {
+    height: 16px;
+    width: 16px;
+    margin-top: -2px;
+}
+
+button.circular:hover {
+    border: 2px solid #ddc28a;
+}
+
+button.circular:active {
+    background: #1e2328;
+    border: 2px solid #60491e;
+}
+
+/* Tooltips */
+
+.tippy-tooltip.light-theme {
+    color: #9e998a;
+    box-shadow: 0px 0px 3px 0px rgba(0, 0, 0, 0.75);
+    background-color: #010a13;
+    font-family: sans-serif;
+    font-size: 12px;
+    padding: 10px;
+    border: 2px solid #60491f;
+    border-radius: 0px;
+}
+.tippy-tooltip.light-theme[x-placement^="top"] .tippy-arrow {
+    border-top: 8px solid #fff;
+    border-right: 8px solid transparent;
+    border-left: 8px solid transparent;
+}
+.tippy-tooltip.light-theme[x-placement^="bottom"] .tippy-arrow {
+    border-bottom: 8px solid #fff;
+    border-right: 8px solid transparent;
+    border-left: 8px solid transparent;
+}
+.tippy-tooltip.light-theme[x-placement^="left"] .tippy-arrow {
+    border-left: 8px solid #fff;
+    border-top: 8px solid transparent;
+    border-bottom: 8px solid transparent;
+}
+.tippy-tooltip.light-theme[x-placement^="right"] .tippy-arrow {
+    border-right: 8px solid #fff;
+    border-top: 8px solid transparent;
+    border-bottom: 8px solid transparent;
+}
+.tippy-tooltip.light-theme .tippy-backdrop {
+    background-color: #010a13;
+}
+.tippy-tooltip.light-theme .tippy-roundarrow {
+    fill: #60491f;
+    margin-top: -3px;
+}
+.tippy-tooltip.light-theme[data-animatefill] {
+    background-color: initial;
 }

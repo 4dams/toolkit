@@ -39,7 +39,8 @@ export class SelectComponent implements OnInit {
 
     public writeValue(value: string, label: string) {
         this.value = value;
-        this.inputValue = label;
+        const v = this.options.find(o => o.value === value);
+        this.inputValue = v ? v.label : null;
     }
 
     public changeEvent() {
