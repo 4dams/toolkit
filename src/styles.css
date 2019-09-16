@@ -57,6 +57,8 @@ button {
     border-image-slice: 1;
     font-size: 13px;
     cursor: pointer;
+    display: block;
+    margin: 12px 0;
 }
 
 button:hover {
@@ -95,6 +97,23 @@ button.circular:hover {
 button.circular:active {
     background: #1e2328;
     border: 2px solid #60491e;
+}
+
+input[type="text"] {
+    box-shadow: 0px 0px 3px 0px rgba(0, 0, 0, 0.75);
+    color: #a3a3a3;
+    background-color: #010a13;
+    border: 1px solid;
+    border-image-source: linear-gradient(180deg, #785a28, #785a28);
+    border-image-slice: 1;
+    height: 28px;
+    padding: 0 10px;
+    font-size: 12px;
+    min-width: 192px;
+}
+
+input[type="text"]:focus {
+    border-image-source: linear-gradient(180deg, #785a28, #c7a96d);
 }
 
 /* Tooltips */

@@ -16,6 +16,12 @@
     position: relative;
 }
 
+.warning {
+    margin-bottom: -3px;
+    margin-left: 5px;
+    cursor: pointer;
+}
+
 .profile > .background {
     margin-top: -35px;
 }

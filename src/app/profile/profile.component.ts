@@ -87,6 +87,8 @@ export class ProfileComponent implements OnInit {
     ];
 
     public form = {
+        customName: "",
+        customStatus: "",
         customRank: {
             division: "",
             tier: "",
@@ -118,10 +120,14 @@ export class ProfileComponent implements OnInit {
                 .get("lol-chat/v1/me")
                 .then(me => {
                     console.log(me);
+                    // Prefill form
                     this.form.customRank.division = me.lol.rankedLeagueDivision;
                     this.form.customRank.tier = me.lol.rankedLeagueTier;
                     this.form.customRank.queue = me.lol.rankedLeagueQueue;
+                    this.form.customName = me.name;
+                    this.form.customStatus = me.statusMessage;
 
+                    // Set local profile information
                     this.profile.summoner.icon = me.icon;
                     this.profile.summoner.level = me.lol.level;
                     this.profile.summoner.name = me.name;
@@ -136,6 +142,43 @@ export class ProfileComponent implements OnInit {
         });
     }
 
+    public profileCrestUrl(tier: string) {
+        switch (tier) {
+            case "UNRANKED":
+                return "../../assets/img/crests/crest_unranked.png";
+
+            case "IRON":
+                return "../../assets/img/crests/crest_unranked.png";
+
+            case "BRONZE":
+                return "../../assets/img/crests/crest_unranked.png";
+
+            case "SILVER":
+                return "../../assets/img/crests/crest_unranked.png";
+
+            case "GOLD":
+                return "../../assets/img/crests/crest_gold.png";
+
+            case "PLATINUM":
+                return "../../assets/img/crests/crest_unranked.png";
+
+            case "DIAMOND":
+                return "../../assets/img/crests/crest_diamond.png";
+
+            case "MASTER":
+                return "../../assets/img/crests/crest_master.png";
+
+            case "GRANDMASTER":
+                return "../../assets/img/crests/crest_unranked.png";
+
+            case "CHALLENGER":
+                return "../../assets/img/crests/crest_challenger.png";
+
+            default:
+                return "../../assets/img/crests/crest_unranked.png";
+        }
+    }
+
     public setRank() {
         this.lcu
             .put("lol-chat/v1/me", {
@@ -144,6 +187,34 @@ export class ProfileComponent implements OnInit {
                     rankedLeagueQueue: this.form.customRank.queue,
                     rankedLeagueTier: this.form.customRank.tier,
                 },
+            })
+            .then(res => {
+                console.log(res);
+                this.updateProfileInfo();
+            })
+            .catch(err => {
+                console.log(err);
+            });
+    }
+
+    public setSummonerName() {
+        this.lcu
+            .put("lol-chat/v1/me", {
+                name: this.form.customName,
+            })
+            .then(res => {
+                console.log(res);
+                this.updateProfileInfo();
+            })
+            .catch(err => {
+                console.log(err);
+            });
+    }
+
+    public setStatus() {
+        this.lcu
+            .put("lol-chat/v1/me", {
+                statusMessage: this.form.customStatus,
             })
             .then(res => {
                 console.log(res);
