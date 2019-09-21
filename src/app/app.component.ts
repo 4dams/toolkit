@@ -9,18 +9,12 @@ import { LcuService } from "./services/lcu.service";
     styleUrls: ["./app.component.css"],
 })
 export class AppComponent {
-    constructor(public electronService: ElectronService, private lcu: LcuService) {
+    constructor(public electronService: ElectronService, public lcu: LcuService) {
         console.log("AppConfig/environment:", AppConfig);
 
         if (electronService.isElectron) {
-            // console.log(process.env);
-            // console.log("Electron ipcRenderer", electronService.ipcRenderer);
-            // console.log("NodeJS childProcess", electronService.childProcess);
-
             console.log("Requesting LCU Connection...");
             this.lcu.requestLcuConnection();
-        } else {
-            console.warn("WEB MODE");
         }
     }
 }

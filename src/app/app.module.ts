@@ -17,10 +17,18 @@ import { ProfileComponent } from "./profile/profile.component";
 import { MiscComponent } from "./misc/misc.component";
 import { SelectComponent } from "./components/select/select.component";
 import { TippyModule } from "ng-tippy";
-import { ChampSelectComponent } from './champ-select/champ-select.component';
+import { ChampSelectComponent } from "./champ-select/champ-select.component";
 
 @NgModule({
-    declarations: [AppComponent, HomeComponent, MenuComponent, ProfileComponent, MiscComponent, SelectComponent, ChampSelectComponent],
+    declarations: [
+        AppComponent,
+        HomeComponent,
+        MenuComponent,
+        ProfileComponent,
+        MiscComponent,
+        SelectComponent,
+        ChampSelectComponent,
+    ],
     imports: [BrowserModule, FormsModule, HttpClientModule, CoreModule, SharedModule, AppRoutingModule, TippyModule],
     providers: [],
     bootstrap: [AppComponent],

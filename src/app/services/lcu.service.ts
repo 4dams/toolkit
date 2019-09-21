@@ -51,11 +51,11 @@ export class LcuService {
     }
 
     /**
-     * @private Initialize our application
+     * @public Initialize our application
      *
      * @param connection LCU connection info, equal to this.connection
      */
-    private init(connection: any) {
+    public init(connection: any) {
         this.connection = connection;
 
         // Create AxiosInstance
@@ -148,9 +148,9 @@ export class LcuService {
     public getProfileBackground(): Promise<string> {
         return new Promise((resolve, reject) => {
             // Get champion table
-            this.get("lol-champions/v1/owned-champions-minimal").then(data => {
-                data.map(champ => {
-                    this.champTable[champ.id] = champ.name;
+            this.get("lol-champions/v1/owned-champions-minimal").then(champions => {
+                champions.map(champion => {
+                    this.champTable[champion.id] = champion.name;
                 });
 
                 // Get summoner profile

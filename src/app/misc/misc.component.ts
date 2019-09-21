@@ -1,15 +1,12 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit } from "@angular/core";
 
 @Component({
-  selector: 'app-misc',
-  templateUrl: './misc.component.html',
-  styleUrls: ['./misc.component.css']
+    selector: "app-misc",
+    templateUrl: "./misc.component.html",
+    styleUrls: ["./misc.component.css"],
 })
 export class MiscComponent implements OnInit {
+    constructor() {}
 
-  constructor() { }
-
-  ngOnInit() {
-  }
-
+    ngOnInit() {}
 }
