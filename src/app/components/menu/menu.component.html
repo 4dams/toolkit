@@ -11,6 +11,7 @@
                     arrow: true,
                     arrowType: 'round'
                 }"
+                (click)="lcu.init(lcu.connection)"
             >
                 <img src="../../../assets/icons/refresh.svg" />
             </button>
@@ -21,6 +22,9 @@
         </div>
         <div class="item" routerLink="/profile" routerLinkActive="active">
             <a>Profile</a>
+        </div>
+        <div class="item" routerLink="/champselect" routerLinkActive="active">
+            <a>Champ Select</a>
         </div>
         <div class="item" routerLink="/misc" routerLinkActive="active">
             <a>Miscellaneous</a>

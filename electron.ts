@@ -37,7 +37,7 @@ function createWindow() {
             // bypass the LCUs CORS policy
             webSecurity: false,
         },
-        icon: path.join(__dirname, "icons/icon_64px.png"),
+        icon: path.join(__dirname, "src/assets/icons/app_icon/icon_white_64px.png"),
     });
 
     if (serve) {

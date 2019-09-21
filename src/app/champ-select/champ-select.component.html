@@ -1,0 +1,17 @@
+<!-- Auto accept queue -->
+<h1>Auto Accept Queue</h1>
+
+<label class="input checkbox" [ngClass]="{ checked: checkbox.checked }">
+    Enabled
+    <input
+        type="checkbox"
+        (ngModelChange)="champSelect.toggleReadyCheck()"
+        [(ngModel)]="champSelect.enableReadyCheck"
+        #checkbox
+    />
+    <span class="checkmark"></span>
+</label>
+
+<!-- Champ Select Greeting -->
+<div class="divider"></div>
+<h1>Champ Select Greeting</h1>

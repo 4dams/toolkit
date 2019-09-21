@@ -28,20 +28,32 @@
 
 .profile > .summoner-icon {
     position: absolute;
-    width: 128px;
-    height: 128px;
+    width: 121px;
+    height: 121px;
     border-radius: 50%;
-    top: 47px;
+    top: 70px;
+}
+
+.profile > .border-bottom {
+    position: absolute;
+    top: 0;
+    width: 225px;
+}
+
+.profile > .border-top {
+    position: absolute;
+    top: 0;
+    width: 225px;
 }
 
 .profile > .level-background {
     position: absolute;
-    top: 156px;
+    top: 190px;
 }
 
 .profile > .level-level {
     position: absolute;
-    top: 156px;
+    top: 190px;
     margin-top: 6px;
     font-family: Beaufort;
     color: #f0e6d2;
@@ -50,7 +62,7 @@
 
 .profile > .summoner-name {
     position: absolute;
-    top: 200px;
+    top: 275px;
     margin: 0;
     font-family: Beaufort;
     color: #f0e6d2;
@@ -60,7 +72,7 @@
 
 .profile > .summoner-id {
     position: absolute;
-    top: 230px;
+    top: 305px;
     margin: 0;
     color: #f0e6d2;
     font-size: 12px;
@@ -69,7 +81,7 @@
 
 .profile > .summoner-elo {
     position: absolute;
-    top: 250px;
+    top: 325px;
     margin: 0;
     font-family: Beaufort;
     color: #f0e6d2;

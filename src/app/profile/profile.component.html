@@ -1,7 +1,11 @@
 <div class="split">
     <div class="profile">
-        <img class="background" [src]="profileCrestUrl(profile.summoner.tier)" />
+        <img class="background" [src]="profile.crest(profile.summoner.tier)" />
+
+        <img class="border-bottom" src="../../assets/img/borders/diamond_bottom.png" />
         <img class="summoner-icon" [src]="'https://static.4da.ms/toolkit/icons/' + profile.summoner.icon + '.png'" />
+        <img class="border-top" src="../../assets/img/borders/diamond_top.png" />
+
         <img class="level-background" src="../../assets/img/level.png" />
         <p class="level-level">{{ profile.summoner.level }}</p>
         <p class="summoner-name">{{ profile.summoner.name }}</p>
@@ -41,8 +45,8 @@
             />
         </h1>
 
-        <input type="text" [(ngModel)]="form.customName" />
-        <button (click)="setSummonerName()">Set Summoner Name</button>
+        <input type="text" [(ngModel)]="profile.form.customName" />
+        <button (click)="profile.setSummonerName()">Set Summoner Name</button>
 
         <!-- Custom Rank -->
         <div class="divider"></div>
@@ -50,28 +54,20 @@
             Custom Rank
         </h1>
 
-        <app-select [options]="tiers" [(ngModel)]="form.customRank.tier"></app-select>
-        <app-select [options]="divisions" [(ngModel)]="form.customRank.division"></app-select>
-        <app-select [options]="queues" [(ngModel)]="form.customRank.queue"></app-select>
-        <button (click)="setRank()">Set Rank</button>
+        <app-select [options]="profile.tiers" [(ngModel)]="profile.form.customRank.tier"></app-select>
+        <app-select [options]="profile.divisions" [(ngModel)]="profile.form.customRank.division"></app-select>
+        <app-select [options]="profile.queues" [(ngModel)]="profile.form.customRank.queue"></app-select>
+        <button (click)="profile.setRank()">Set Rank</button>
 
         <!-- Custom Status -->
         <div class="divider"></div>
         <h1>Custom Status</h1>
 
-        <input type="text" [(ngModel)]="form.customStatus" />
-        <button (click)="setStatus()">Set Status</button>
+        <input type="text" [(ngModel)]="profile.form.customStatus" />
+        <button (click)="profile.setStatus()">Set Status</button>
 
         <!-- Custom Icon -->
         <div class="divider"></div>
         <h1>Custom Summoner Icon</h1>
-
-        <!-- Custom Icon -->
-        <div class="divider"></div>
-        <h1>Auto Accept Queue</h1>
-
-        <!-- Custom Icon -->
-        <div class="divider"></div>
-        <h1>Champ Select Greeting</h1>
     </div>
 </div>
