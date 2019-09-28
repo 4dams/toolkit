@@ -1,14 +1,20 @@
 <!-- Auto accept queue -->
-<h1>Auto Accept Queue</h1>
+<h1>Ready Check</h1>
 
-<label class="input checkbox" [ngClass]="{ checked: checkbox.checked }">
-    Enabled
+<label class="input checkbox" [ngClass]="{ checked: readyCheck.checked }">
+    Automatically accept
     <input
         type="checkbox"
         (ngModelChange)="champSelect.toggleReadyCheck()"
         [(ngModel)]="champSelect.enableReadyCheck"
-        #checkbox
+        #readyCheck
     />
+    <span class="checkmark"></span>
+</label>
+
+<label class="input checkbox" [ngClass]="{ checked: autoHide.checked }">
+    Automatically hide window after accepting
+    <input type="checkbox" [(ngModel)]="champSelect.enableAutoHide" #autoHide />
     <span class="checkmark"></span>
 </label>
 

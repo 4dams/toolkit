@@ -156,9 +156,9 @@ export class LcuService {
                 // Get summoner profile
                 this.get("lol-summoner/v1/current-summoner/summoner-profile").then(data => {
                     // Get champion name
-                    const champ = this.champTable[
-                        data.backgroundSkinId.toString().slice(0, data.backgroundSkinId.toString().length - 3)
-                    ];
+                    const champ = data.backgroundSkinId
+                        .toString()
+                        .slice(0, data.backgroundSkinId.toString().length - 3);
 
                     // Get skin id
                     const skin = parseInt(
@@ -167,7 +167,7 @@ export class LcuService {
                     );
 
                     // Resolve url
-                    resolve(`https://static.4da.ms/toolkit/splashs/${champ}_${skin}.jpg`);
+                    resolve(`https://cdn.communitydragon.org/latest/champion/${champ}/splash-art/skin/${skin}`);
                 });
             });
         });

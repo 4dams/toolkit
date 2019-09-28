@@ -11,6 +11,11 @@ export class ChampSelectService {
     public enableReadyCheck = false;
 
     /**
+     * @public Boolean if window will be hidden after accepting
+     */
+    public enableAutoHide = false;
+
+    /**
      * @public Ready check interval
      *
      * undefined if timer is not active
@@ -56,6 +61,13 @@ export class ChampSelectService {
                         this.lcu.post("lol-matchmaking/v1/ready-check/accept").then(ready => {
                             console.log("Ready check accepted!", ready);
                         });
+
+                        // If auto hide is enabled, hide window, too
+                        if (this.enableAutoHide) {
+                            this.lcu.post("riotclient/ux-minimize").then(() => {
+                                console.log("Window hidden!");
+                            });
+                        }
                     }
                 })
                 .catch(err => {
